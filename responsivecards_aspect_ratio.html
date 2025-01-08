@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Responsive Design with Picture Tag</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .box {
+            /* position: relative; */
+            width: 30%; /* Desktop size */
+            /* padding-top: 66.67%; */
+            background-color: #222;
+            margin: 10px;
+            box-shadow: 2px 2px 5px #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          
+         
+        
+            .box {
+                width: 33.33%;      
+                /* padding-top: 66.67%; */ /* Maintain aspect ratio */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .box {
+                width: 80%; /* Mobile size */
+                /* padding-top: 66.67%; */ /* Maintain aspect ratio */
+            }
+        }
+
+        .box picture,
+        .box img {
+            /* position: absolute; */
+           /*  top: 0;
+            left: 0; */
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures proper scaling */
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .box h1,
+        .box p {
+            color: white;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            text-align: justify;
+            /* position: relative; */
+            /* z-index: 1; */
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <!--<a href="#" target="_blank"> -->
+                <picture>
+                    <source srcset="https://placehold.co/600x400" media="(max-width: 767px)">
+                    <source srcset="https://placehold.co/800x533" media="(max-width: 1024px)">
+                    <source srcset="https://placehold.co/1200x800" media="(min-width: 1025px)">
+                    <img src="https://placehold.co/600x400" alt="laptop_image">
+                </picture>
+                <h1>Laptop</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+           <!-- </a> -->
+        </div>
+
+        <div class="box">
+            <a href="#" target="_blank">
+                <picture>
+                     <source srcset="https://placehold.co/600x400" media="(max-width: 767px)">
+                    <source srcset="https://placehold.co/800x533" media="(max-width: 1024px)">
+                    <source srcset="https://placehold.co/1200x800" media="(min-width: 1025px)">
+                    <img src="https://placehold.co/300x200" alt="laptop_image">
+                </picture>
+                <h1>Mobile</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="#" target="_blank">
+                <picture>
+                    <source srcset="https://placehold.co/600x400" media="(max-width: 767px)">
+                    <source srcset="https://placehold.co/800x533" media="(max-width: 1024px)">
+                    <source srcset="https://placehold.co/1200x800" media="(min-width: 1025px)">
+                    <img src="https://placehold.co/600x400" alt="laptop_image">
+                </picture>
+                <h1>Television</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
