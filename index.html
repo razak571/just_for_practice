@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Responsive Design</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #000000;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media(min-width: 1025px) {
+
+			#container {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.box {
+				height: auto;
+				width: 33.33%;
+				background-color: red;
+				margin: 10px;
+				/*border: solid #ffffff;*/
+				box-shadow: 2px 2px 5px #ffffff;
+			}
+		}
+
+
+		@media(max-width: 1024px) and (min-width: 768px) {
+
+			#container {
+				display: flex;
+				width: 100%;
+				justify-content: flex-start;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			.box {
+				height: auto;
+				width: 46%;
+				background-color: #0000ff;
+				margin: 12px;
+				box-shadow: 2px 2px 5px pink;
+			}
+		}
+
+
+		@media(max-width: 767px) and (min-width: 481px) {
+
+			#container {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			.box {
+				width: 80%;
+				height: auto;
+				background-color: green;
+				margin: 10px;
+				/*border: solid #ffffff;*/
+				box-shadow: 2px 2px 5px #ffffff;
+			}
+		}
+
+		.box h1,
+		.box p {
+			color: white;
+			padding: 5px;
+			font-family: Arial;
+			text-align: justify;
+		}
+
+		.box {
+			border-radius: 20px;
+		}
+
+		.box img {
+			border-radius: 20px 20px 0px 0px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div class="box">
+			<a href="#" target="_blank">
+				<img src="https://placehold.co/600x400" width="100%" alt="laptop_image" />
+				<h1>Laptop</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</a>
+		</div>
+
+		<div class="box">
+			<a href="#" target="_blank">
+				<img src="https://placehold.co/600x400" width="100%" alt="mobile_image" />
+				<h1>Mobile</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</a>
+		</div>
+
+		<div class="box">
+			<a href="#" target="_blank">
+				<img src="https://placehold.co/600x400" width="100%" alt="television_image" />
+				<h1>Television</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</a>
+		</div>
+	</div>
+</body>
+
+</html>
